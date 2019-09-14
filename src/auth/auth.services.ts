@@ -15,7 +15,9 @@ export class AuthService {
     return 'Hello World!';
   }
   async login(username: string, password: string){
-    return await this.registrationModel.findOne({username: username, password})
+    const person = await this.registrationModel.findOne({username: username, password:password})
+
+    return person;
   }
   async register(registrationDTO: Registration){
     const createRegistration = new this.registrationModel(registrationDTO);
