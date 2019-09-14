@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 {"version":3,"file":"invoice.module.js","sourceRoot":"","sources":["../../src/invoice/invoice.module.ts"],"names":[],"mappings":";;;;;;;;AAAA,2CAAwC;AACxC,+CAAgD;AAChD,yDAAmD;AAOnD,IAAa,UAAU,GAAvB,MAAa,UAAU;CAAG,CAAA;AAAb,UAAU;IANtB,eAAM,CAAC;QACN,OAAO,EAAE;YACT,yBAAc,CAAC,UAAU,CAAC,CAAC,EAAE,IAAI,EAAE,MAAM,EAAE,MAAM,EAAE,gCAAa,EAAC,CAAC,CAAC;SAAC;QACpE,WAAW,EAAE,CAAC,cAAc,CAAC;QAC7B,SAAS,EAAE,CAAC,WAAW,CAAC;KACzB,CAAC;GACW,UAAU,CAAG;AAAb,gCAAU"}
 =======
 {"version":3,"file":"invoice.module.js","sourceRoot":"","sources":["../../src/invoice/invoice.module.ts"],"names":[],"mappings":";;;;;;;;AAAA,2CAAwC;AAExC,yDAAoD;AACpD,6DAAyD;AAMzD,IAAa,aAAa,GAA1B,MAAa,aAAa;CAAG,CAAA;AAAhB,aAAa;IALzB,eAAM,CAAC;QACN,OAAO,EAAE,EAAE;QACX,WAAW,EAAE,CAAC,sCAAiB,CAAC;QAChC,SAAS,EAAE,CAAC,iCAAc,CAAC;KAC5B,CAAC;GACW,aAAa,CAAG;AAAhB,sCAAa"}
 >>>>>>> auth guard implemented
+=======
+{"version":3,"file":"invoice.module.js","sourceRoot":"","sources":["../../src/invoice/invoice.module.ts"],"names":[],"mappings":";;;;;;;;AAAA,2CAAwC;AAExC,yDAAoD;AACpD,6DAAyD;AAMzD,IAAa,aAAa,GAA1B,MAAa,aAAa;CAAG,CAAA;AAAhB,aAAa;IALzB,eAAM,CAAC;QACN,OAAO,EAAE,EAAE;QACX,WAAW,EAAE,CAAC,sCAAiB,CAAC;QAChC,SAAS,EAAE,CAAC,iCAAc,CAAC;KAC5B,CAAC;GACW,aAAa,CAAG;AAAhB,sCAAa"}
+>>>>>>> invoice

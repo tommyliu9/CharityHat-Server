@@ -1,4 +1,5 @@
 "use strict";
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
@@ -7,6 +8,8 @@ exports.InvoiceSchema = new mongoose.Schema({
     npo: String
 });
 =======
+=======
+>>>>>>> invoice
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -53,5 +56,8 @@ InvoiceService = __decorate([
     common_1.Injectable()
 ], InvoiceService);
 exports.InvoiceService = InvoiceService;
+<<<<<<< HEAD
 >>>>>>> auth guard implemented
+=======
+>>>>>>> invoice
 //# sourceMappingURL=invoice.services.js.map

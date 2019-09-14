@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
 const mongoose_1 = require("@nestjs/mongoose");
 const invoice_services_1 = require("./invoice.services");
@@ -23,6 +24,8 @@ AuthModule = __decorate([
 ], AuthModule);
 exports.AuthModule = AuthModule;
 =======
+=======
+>>>>>>> invoice
 const invoice_services_1 = require("./invoice.services");
 const invoice_controller_1 = require("./invoice.controller");
 let InvoiceModule = class InvoiceModule {
@@ -35,5 +38,8 @@ InvoiceModule = __decorate([
     })
 ], InvoiceModule);
 exports.InvoiceModule = InvoiceModule;
+<<<<<<< HEAD
 >>>>>>> auth guard implemented
+=======
+>>>>>>> invoice
 //# sourceMappingURL=invoice.module.js.map

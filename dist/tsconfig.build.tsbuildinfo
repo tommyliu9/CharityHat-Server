@@ -1125,11 +1125,14 @@
         "version": "0af6660ff82f4632fc17fdba372e44b11fd56d7295e04eeb3b32f1f17b22855e",
         "signature": "c97aa9b5fe888f42a3256d2e9e9e325cb5e88a355f0120a03d5e7bdafc2b52f6"
       },
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
       "c:/users/andre/projects/charity-hat/charityhat-server/src/auth/auth.services.ts": {
         "version": "eedad6c762f2c8ac6ddbb587d15b38db0415b21c88bbf8d7855a5cb4b7804e6e",
         "signature": "c84bb808c4f78972e8d170288ed1518d6b33990c9e7ad9a74a1ac764a720aa25"
 =======
+=======
+>>>>>>> invoice
       "/users/tommy/documents/github/charity-hat-server/node_modules/@types/jsonwebtoken/index.d.ts": {
         "version": "3ee1c4479498ce568cf7789174c181a68a7f7f16f7b338132ded0daf24a8a971",
         "signature": "3ee1c4479498ce568cf7789174c181a68a7f7f16f7b338132ded0daf24a8a971"
@@ -1153,6 +1156,17 @@
       "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/jwt/dist/index.d.ts": {
         "version": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776",
         "signature": "a13aac535101a942283e3d00bce50f483bfa9bed6e1f8dfda33a3bb072498776"
+<<<<<<< HEAD
+=======
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/jwt/index.d.ts": {
+        "version": "a2b176f66f0b708241265fb3b417597c9c9d21912bbb7f5cc00d99af551c2078",
+        "signature": "a2b176f66f0b708241265fb3b417597c9c9d21912bbb7f5cc00d99af551c2078"
+      },
+      "/users/tommy/documents/github/charity-hat-server/src/auth/auth.services.ts": {
+        "version": "257644aa6bae1189af3b71e580def7c85930dd8837cd16e551f12ec224e28dc9",
+        "signature": "712d73ca8793b18a6ed73ee0dd9c048c2d4352a83173a3bacae267df40f80251"
+>>>>>>> invoice
       },
       "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/jwt/index.d.ts": {
         "version": "a2b176f66f0b708241265fb3b417597c9c9d21912bbb7f5cc00d99af551c2078",
@@ -1339,6 +1353,7 @@
         "version": "70aecfd981af29d74ba7ab6667b9cc2a53459d8eb099c139fd2aa54c3059c71d",
         "signature": "70aecfd981af29d74ba7ab6667b9cc2a53459d8eb099c139fd2aa54c3059c71d"
       },
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
       "c:/users/andre/projects/charity-hat/charityhat-server/src/auth/auth.controller.ts": {
         "version": "c474b1e31ca7ba27b1bd69bb3c617c136a955db511eff9357def4ddafe59ac26",
@@ -1456,6 +1471,112 @@
         "version": "cee4cbebd3b2b9456f39e852a5baf6ada86d5e70c2ba9e3a56aeeb6dc8a38f90",
         "signature": "550231b5bd8d3e4dcd53ede741e65e775615cad13508342cd59ce7766741746f"
       },
+=======
+      "/users/tommy/documents/github/charity-hat-server/src/auth/auth.controller.ts": {
+        "version": "306d788cf03a03dbf4155e4d1f6a9ac5497d3f5e3617992a78ed76575701cc19",
+        "signature": "fc8f7b88a5659290adf9c2f961d8f849087f42c754765c8f7cd7c360703af1f3"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/range-parser/index.d.ts": {
+        "version": "4e88b833be14c7f384e0dcd57bb30acd799e8e34d212635d693e41a75a71164b",
+        "signature": "4e88b833be14c7f384e0dcd57bb30acd799e8e34d212635d693e41a75a71164b"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/express-serve-static-core/index.d.ts": {
+        "version": "d73f61d755e6f17b9dc315cbd8e6522a47c2153a07b67fd8295ef48b40ad6344",
+        "signature": "d73f61d755e6f17b9dc315cbd8e6522a47c2153a07b67fd8295ef48b40ad6344"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/mime/index.d.ts": {
+        "version": "be27a64e821a3e5af838650e4aa25805c60f057d0c37a9762c378d19d364b3e6",
+        "signature": "be27a64e821a3e5af838650e4aa25805c60f057d0c37a9762c378d19d364b3e6"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/serve-static/index.d.ts": {
+        "version": "cdbae5083ef8f786069519405ca1f1e2ce72b9efebdf5e1931584fba747f3bc0",
+        "signature": "cdbae5083ef8f786069519405ca1f1e2ce72b9efebdf5e1931584fba747f3bc0"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/connect/index.d.ts": {
+        "version": "c3be42b83b5f57ae2f65280fa395f6d31f61304ac1a29b7b406b6a0e71da8c82",
+        "signature": "c3be42b83b5f57ae2f65280fa395f6d31f61304ac1a29b7b406b6a0e71da8c82"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/body-parser/index.d.ts": {
+        "version": "599abfa56230d73afc30a3bde749c2efd90acb58301b446835d5e235b35e2768",
+        "signature": "599abfa56230d73afc30a3bde749c2efd90acb58301b446835d5e235b35e2768"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/express/index.d.ts": {
+        "version": "434d7d3188d85bd46c64dcc8268422ffdfdd19fdbc98ec01446d650414fcaa0b",
+        "signature": "434d7d3188d85bd46c64dcc8268422ffdfdd19fdbc98ec01446d650414fcaa0b"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/passport/index.d.ts": {
+        "version": "31a5aab6f219b912bea2a80de1a1232272314eff56177416fb31ba95bb9c64e6",
+        "signature": "31a5aab6f219b912bea2a80de1a1232272314eff56177416fb31ba95bb9c64e6"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/passport-strategy/index.d.ts": {
+        "version": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52",
+        "signature": "29d59e921bc723594bbfc98230d24f38f0d5a669f28fcf989b7468f4f95b7c52"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/passport-jwt/index.d.ts": {
+        "version": "e31914a423de357d1c26f76845e9b9a04b9eb61f41e30d62ac896ad964dcabcd",
+        "signature": "e31914a423de357d1c26f76845e9b9a04b9eb61f41e30d62ac896ad964dcabcd"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/abstract.strategy.d.ts": {
+        "version": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea",
+        "signature": "ba63131c5e91f797736444933af16ffa42f9f8c150d859ec65f568f037a416ea"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/interfaces/auth-module.options.d.ts": {
+        "version": "142e2e1abd8603dfdeaa1c88d73003a7912aa949b3a19234fa91f729ebfa2fcc",
+        "signature": "142e2e1abd8603dfdeaa1c88d73003a7912aa949b3a19234fa91f729ebfa2fcc"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/interfaces/type.interface.d.ts": {
+        "version": "340a45cd77b41d8a6deda248167fa23d3dc67ec798d411bd282f7b3d555b1695",
+        "signature": "340a45cd77b41d8a6deda248167fa23d3dc67ec798d411bd282f7b3d555b1695"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/interfaces/index.d.ts": {
+        "version": "0e9aa853b5eb2ca09e0e3e3eb94cbd1d5fb3d682ab69817d4d11fe225953fc57",
+        "signature": "0e9aa853b5eb2ca09e0e3e3eb94cbd1d5fb3d682ab69817d4d11fe225953fc57"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/auth.guard.d.ts": {
+        "version": "69b768acf41ee0819f71ef899c85a4aa4c2ccf74996358bfaa6d15f26b0e8383",
+        "signature": "69b768acf41ee0819f71ef899c85a4aa4c2ccf74996358bfaa6d15f26b0e8383"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/passport.module.d.ts": {
+        "version": "793c353144f16601da994fa4e62c09b7525836ce999c44f69c28929072ca206a",
+        "signature": "793c353144f16601da994fa4e62c09b7525836ce999c44f69c28929072ca206a"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/passport/passport.serializer.d.ts": {
+        "version": "632ab81ae917eb918916505489542cf5ee35fd3870c7e1f013238d2887183ca0",
+        "signature": "632ab81ae917eb918916505489542cf5ee35fd3870c7e1f013238d2887183ca0"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/passport/passport.strategy.d.ts": {
+        "version": "3ba3210ac36ccb9768d8e18a7a2b00165992d8f0a389ec6f01cc0a3f73422f39",
+        "signature": "3ba3210ac36ccb9768d8e18a7a2b00165992d8f0a389ec6f01cc0a3f73422f39"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/dist/index.d.ts": {
+        "version": "585bc61f439c027640754dd26e480afa202f33e51db41ee283311a59c12c62e7",
+        "signature": "585bc61f439c027640754dd26e480afa202f33e51db41ee283311a59c12c62e7"
+      },
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@nestjs/passport/index.d.ts": {
+        "version": "a2b176f66f0b708241265fb3b417597c9c9d21912bbb7f5cc00d99af551c2078",
+        "signature": "a2b176f66f0b708241265fb3b417597c9c9d21912bbb7f5cc00d99af551c2078"
+      },
+      "/users/tommy/documents/github/charity-hat-server/src/auth/jwt.strategy.ts": {
+        "version": "5b0bcd9ee40aef8a38a05903900a381ddf64894ef6a6d674f306a30df55dbf29",
+        "signature": "bda9ec8fb9d513f1e43c19c0927d510750c0c7de0ef7ab49ef517f3c701d4368"
+      },
+      "/users/tommy/documents/github/charity-hat-server/src/auth/auth.module.ts": {
+        "version": "3937a24d2cbec09ceb0a45400e6ebdd81d6aaac5b3194327175758e9cb805670",
+        "signature": "90012df568c27da64629cf91943028a666f8fcaa4ee40c856ceefd3aea5580e0"
+      },
+      "/users/tommy/documents/github/charity-hat-server/src/invoice/invoice.services.ts": {
+        "version": "6c0291fec8cfddd410a0f5bdb12ed58075ac091d0429ec526f233f4278612cbb",
+        "signature": "703d9c314f62aab8cb424460c0d1b9ef0d381e2123f5c1583d8992cd16ea9800"
+      },
+      "/users/tommy/documents/github/charity-hat-server/src/invoice/invoice.controller.ts": {
+        "version": "6c77022fcb0326151fbcd8365a53074cd67123cd4f3804ed585004f7361054b5",
+        "signature": "0de4f9e21ab9785b4783f2d27a1eaf5f09a8624a74f5fd362bbd4273b0ca81eb"
+      },
+      "/users/tommy/documents/github/charity-hat-server/src/invoice/invoice.module.ts": {
+        "version": "cee4cbebd3b2b9456f39e852a5baf6ada86d5e70c2ba9e3a56aeeb6dc8a38f90",
+        "signature": "550231b5bd8d3e4dcd53ede741e65e775615cad13508342cd59ce7766741746f"
+      },
+>>>>>>> invoice
       "/users/tommy/documents/github/charity-hat-server/src/app.module.ts": {
         "version": "917fda538944ab8a741d87c35a0ccea3e2694e96da358f086d9e181d8b082e00",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644"
@@ -1581,6 +1702,7 @@
         "version": "e25d9bd8f80b6ffbcc8826ed1b407e747e4fbe346c5bab62cbe5837da4eeb189",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
       },
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
       "c:/users/andre/projects/charity-hat/charityhat-server/src/charities/charities.service.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -1614,6 +1736,9 @@
 =======
       "/users/tommy/documents/github/charity-hat-server/src/invoice/invoice.schema.ts": {
 >>>>>>> auth guard implemented
+=======
+      "/users/tommy/documents/github/charity-hat-server/src/invoice/invoice.schema.ts": {
+>>>>>>> invoice
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
@@ -1693,6 +1818,7 @@
         "version": "8b6748f9e15ad7bac494dc3cd3b13ba0a8be195aca97f7c10a96b1c74a956f32",
         "signature": "8b6748f9e15ad7bac494dc3cd3b13ba0a8be195aca97f7c10a96b1c74a956f32"
       },
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
       "c:/users/andre/projects/charity-hat/charityhat-server/node_modules/@types/connect/index.d.ts": {
         "version": "c3be42b83b5f57ae2f65280fa395f6d31f61304ac1a29b7b406b6a0e71da8c82",
@@ -1732,6 +1858,12 @@
         "version": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56",
         "signature": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56"
       },
+=======
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/cookiejar/index.d.ts": {
+        "version": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56",
+        "signature": "16b7fb094ffaa5d270f934e7406e8baee2f8245cfabf6dcc20f693389f005f56"
+      },
+>>>>>>> invoice
       "/users/tommy/documents/github/charity-hat-server/node_modules/@types/istanbul-lib-coverage/index.d.ts": {
 >>>>>>> auth guard implemented
         "version": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd",
@@ -1765,6 +1897,7 @@
         "version": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538",
         "signature": "96d14f21b7652903852eef49379d04dbda28c16ed36468f8c9fa08f7c14c9538"
       },
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
       "c:/users/andre/projects/charity-hat/charityhat-server/node_modules/@types/jsonwebtoken/index.d.ts": {
         "version": "3ee1c4479498ce568cf7789174c181a68a7f7f16f7b338132ded0daf24a8a971",
@@ -1784,6 +1917,8 @@
       },
       "c:/users/andre/projects/charity-hat/charityhat-server/node_modules/@types/stack-utils/index.d.ts": {
 =======
+=======
+>>>>>>> invoice
       "/users/tommy/documents/github/charity-hat-server/node_modules/@types/passport-local/index.d.ts": {
         "version": "e50f9ae34bb92232533e3a32848970dd04f874a8f64d3ae48980e062b6489f26",
         "signature": "e50f9ae34bb92232533e3a32848970dd04f874a8f64d3ae48980e062b6489f26"
@@ -6545,6 +6680,7 @@
       ],
       "/users/tommy/documents/github/charity-hat-server/node_modules/@types/babel__generator/index.d.ts": [
         "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/types/lib/index.d.ts",
+<<<<<<< HEAD
         "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
         "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -6577,6 +6713,40 @@
         "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
         "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+=======
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/babel__traverse/index.d.ts": [
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/types/lib/index.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/types/lib/index.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/babel__template/index.d.ts": [
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/types/lib/index.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/babel__core/index.d.ts": [
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/babel__generator/index.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/babel__traverse/index.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/babel__template/index.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/types/lib/index.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/tommy/documents/github/charity-hat-server/node_modules/@types/cookiejar/index.d.ts": [
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
+        "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+>>>>>>> invoice
       "/users/tommy/documents/github/charity-hat-server/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
         "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/util.d.ts",
         "/users/tommy/documents/github/charity-hat-server/node_modules/@types/node/ts3.2/util.d.ts"
