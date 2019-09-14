@@ -8,4 +8,5 @@ export const RegistrationSchema = new mongoose.Schema({
   },
   username: String,
   password: String,
+  clientid: String,
 });
