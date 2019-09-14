@@ -42,7 +42,7 @@ export class InvoiceService {
     console.log(afterRes);
     return invoiceId
   } 
-  createInvoiceBody(amount: number, customeridentifier){
+  createInvoiceBody( amount: number, customeridentifier){
       const x = {
           email: "api.freshbooks@gmail.com",
           customerid: customeridentifier,
