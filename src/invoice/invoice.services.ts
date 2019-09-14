@@ -12,13 +12,14 @@ export class InvoiceService {
 
   async createInvoice(user: string, amount: number, npo: string){
     const body = this.createInvoiceBody(amount, 15450)
-    const response = await this.httpService.
-    post(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices?`, {invoice: body}, 
-    {
+    const config = {
       headers:{
       Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
       }
-    }).toPromise();
+    };
+    const response = await this.httpService.
+    post(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices?`, {invoice: body}, config
+    ).toPromise();
     const invoiceId = response.data.response.result.invoice.invoiceid;
     const afterRes = await this.httpService.put(
       `https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices/${invoiceId}`,
@@ -29,8 +30,15 @@ export class InvoiceService {
         action_email: true
       }}
     )
-
-    console.log(response.data.response.result.invoice.invoiceid);
+    const fufillOrder = await this.httpService.put(
+      `https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices/${invoiceId}`,
+      {
+        invoice: {
+          status: 2
+        }
+      },config
+    ).toPromise();
+    console.log(fufillOrder.data.response.result.invoice);
     console.log(afterRes);
   } 
   createInvoiceBody(amount: number, customeridentifier){
