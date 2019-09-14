@@ -5,22 +5,30 @@ import { TransactionsController } from './transactions.controller';
 import { Model } from 'mongoose';
 import { TransactionDTO } from './transactions.dto'
 import { Transaction } from './transactions.interface';
+import {InvoiceService } from '../invoice/invoice.services'
 
 @Injectable()
 export class TransactionsService { 
-    constructor(@InjectModel("Transaction") private transactionsModel: Model<Transaction>) {}
+    constructor(@InjectModel("Transaction") private transactionsModel: Model<Transaction>, private readonly invoiceService: InvoiceService) {}
 
-    async getAllTransactions(receiver: string) {
+    async getAllTransactions(npo: string) {
         return await this.transactionsModel.find({
-            receiver
+            npo
         }).exec();
     }
 
-    async postTransactions(transactionDTO: TransactionDTO){ 
-        const transaction = new this.transactionsModel(transactionDTO);
+    async getTransactionsByUsername(username: string){
+        return await this.transactionsModel.find({
+            username
+        }).exec();
+    }
+
+    async postTransactions(username: string, npo: string, dateSent: Date, amount: number){ 
+        const invoiceId: number = await this.invoiceService.createInvoice(username, amount, npo); 
+        const sendingTransaction = new TransactionDTO(username, npo, dateSent, amount, invoiceId);
+        const transaction = new this.transactionsModel(sendingTransaction);
         return await transaction.save()
     }
 
-    
 
 }

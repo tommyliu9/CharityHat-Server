@@ -40,6 +40,7 @@ export class InvoiceService {
     ).toPromise();
     console.log(fufillOrder.data.response.result.invoice);
     console.log(afterRes);
+    return invoiceId
   } 
   createInvoiceBody(amount: number, customeridentifier){
       const x = {

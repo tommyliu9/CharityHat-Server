@@ -8,26 +8,21 @@ import {
   IsString,
   ValidateNested,
 } from 'class-validator';
+import { throwStatement } from '@babel/types';
 
 export class TransactionDTO { 
-    @IsDefined()
-    @IsString()
-    public firstName!: string;
+    constructor(username, npo, dateSent, amount, invoiceId){
+      this.username = username;
+      this.npo = npo;
+      this.dateSent = dateSent; 
+      this.amount = amount; 
+      this.invoiceId = invoiceId;
+    }
 
-    @IsDefined()
-    @IsString()
-    public lastName!: string;
-
-    @IsDefined()
-    @IsString()
-    public receiver!: string;
-
-    @IsDefined()
-    @IsDate()
+    public username!: string;
+    public npo!: string;
     public dateSent!: Date;
-
-    @IsDefined()
-    @IsNumber()
     public amount!: number;
+    public invoiceId: number;
 }
 
