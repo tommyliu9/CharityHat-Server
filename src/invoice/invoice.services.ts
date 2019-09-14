@@ -20,9 +20,18 @@ export class InvoiceService {
       }
     }).toPromise();
     const invoiceId = response.data.response.result.invoice.invoiceid;
-    const afterRes = await this.httpService.put(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices/${invoiceId}`
+    const afterRes = await this.httpService.put(
+      `https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices/${invoiceId}`,
+      {invoice: {
+        email_subject: "Red Cross is requesting a donation",
+        email_recipients: ["whjat@gmail.com"],
+        email_body: "PAY UP",
+        action_email: true
+      }}
     )
+
     console.log(response.data.response.result.invoice.invoiceid);
+    console.log(afterRes);
   } 
   createInvoiceBody(amount: number, customeridentifier){
       const x = {
