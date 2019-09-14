@@ -1,15 +1,29 @@
 
 import * as mongoose from 'mongoose';
-import { Injectable } from '@nestjs/common';
-
+import { Injectable, Post, Param, HttpService } from '@nestjs/common';
+import { request } from 'https';
+const accountNum = 'lwXKJM';
 
 @Injectable()
 export class InvoiceService {
-  
+  constructor(private readonly httpService: HttpService){
+
+  }
 
   async createInvoice(user: string, amount: number, npo: string){
-    const x = this.createInvoiceBody(amount, 15450)
-  }
+    const body = this.createInvoiceBody(amount, 15450)
+    const response = await this.httpService.
+    post(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices?`, {invoice: body}, 
+    {
+      headers:{
+      Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
+      }
+    }).toPromise();
+    const invoiceId = response.data.response.result.invoice.invoiceid;
+    const afterRes = await this.httpService.put(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices/${invoiceId}`
+    )
+    console.log(response.data.response.result.invoice.invoiceid);
+  } 
   createInvoiceBody(amount: number, customeridentifier){
       const x = {
           email: "api.freshbooks@gmail.com",
@@ -38,5 +52,6 @@ export class InvoiceService {
 			theme_font_name: "modern"
 		}
       }
+      return x
   }
 }
