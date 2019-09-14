@@ -13,6 +13,8 @@ export declare class AuthController {
     private readonly appService;
     constructor(appService: AuthService);
     getHello(): string;
-    login(login: Login): Promise<any>;
+    login(login: Login): Promise<"" | {
+        access_token: string;
+    }>;
     register(body: Registration): Promise<any>;
 }

@@ -44,7 +44,9 @@ let AuthController = class AuthController {
         return this.appService.getHello();
     }
     async login(login) {
-        return await this.appService.login(login.username, login.password);
+        const value = await this.appService.login(login.username, login.password);
+        console.log(value);
+        return value;
     }
     async register(body) {
         return await this.appService.register(body);

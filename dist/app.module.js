@@ -11,11 +11,12 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const mongoose_1 = require("@nestjs/mongoose");
 const auth_module_1 = require("./auth/auth.module");
+const invoice_module_1 = require("./invoice/invoice.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [mongoose_1.MongooseModule.forRoot('mongodb://localhost/'), auth_module_1.AuthModule],
+        imports: [mongoose_1.MongooseModule.forRoot('mongodb://localhost/'), auth_module_1.AuthModule, invoice_module_1.InvoiceModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

@@ -1,20 +1,14 @@
 
 import * as mongoose from 'mongoose';
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import {e} from "../../typescript-node-client/api";
-export const InvoiceSchema = new mongoose.Schema({
-  amount: Number,
-  npo: String
-});
+
 
 @Injectable()
-export class AuthService {
+export class InvoiceService {
   
 
-  async createInvoice(){
- 
+  async createInvoice(user: string, amount: number, npo: string){
+    const x = this.createInvoiceBody(amount, 15450)
   }
   createInvoiceBody(amount: number, customeridentifier){
       const x = {
