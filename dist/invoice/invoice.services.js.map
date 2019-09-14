@@ -1,1 +1,1 @@
-{"version":3,"file":"invoice.services.js","sourceRoot":"","sources":["../../src/invoice/invoice.services.ts"],"names":[],"mappings":""}
+{"version":3,"file":"invoice.services.js","sourceRoot":"","sources":["../../src/invoice/invoice.services.ts"],"names":[],"mappings":";;AACA,qCAAqC;AAExB,QAAA,aAAa,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAC/C,MAAM,EAAE,MAAM;IACd,GAAG,EAAE,MAAM;CACZ,CAAC,CAAC"}
