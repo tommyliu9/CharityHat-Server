@@ -10,14 +10,20 @@ import { InjectModel } from '@nestjs/mongoose';
 export class TransactionsController {
     constructor(private transactionsService: TransactionsService){}
 
-    @Get(':receiver')
-    async getAllTransactions(@Param('receiver') receiver): Promise<TransactionDTO[]> {
-        return this.transactionsService.getAllTransactions(receiver);
+    @Get('NPO/:npo')
+    async getAllTransactions(@Param('npo') npo): Promise<TransactionDTO[]> {
+        return this.transactionsService.getAllTransactions(npo);
+    }
+
+    @Get('user/:username')
+    async getTransactionsByUsername(@Param('username') username): Promise <any> { 
+        return this.transactionsService.getTransactionsByUsername(username);
     }
 
     @Post()
     async postTransaction(@Body() body: TransactionDTO): Promise<any> { 
-        return this.transactionsService.postTransactions(body);
+        const { username, npo, dateSent, amount } = body;
+        return this.transactionsService.postTransactions(username, npo, dateSent, amount);
     }
 
 }

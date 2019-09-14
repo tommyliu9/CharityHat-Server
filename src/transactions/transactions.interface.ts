@@ -1,7 +1,7 @@
 export class Transaction {
-    firstName: string;
-    lastName: string; 
-    receiver: string; 
+    username: string;
+    npo: string; 
     dateSent: Date;
     amount: number;
+    invoiceId: number;
 }

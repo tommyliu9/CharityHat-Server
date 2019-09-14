@@ -9,6 +9,7 @@ import { InvoiceController } from './invoice.controller';
   })],
   controllers: [InvoiceController],
   providers: [InvoiceService],
+  exports: [InvoiceService]
 })
 export class InvoiceModule {}
 

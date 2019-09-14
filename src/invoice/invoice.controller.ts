@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, UseGuards, Request } from '@nestjs/common'
 import { AuthGuard } from '@nestjs/passport';
 import { InvoiceService } from './invoice.services';
 export class DonationBody{
+    public username: string;
     public npo: string;
     public amount: number;
 }
@@ -10,11 +11,10 @@ export class InvoiceController {
   constructor(private readonly invoiceService: InvoiceService){
 
   }
-  @UseGuards(AuthGuard('jwt'))
+
   @Post()
-  async makeDonation(@Request() req, @Body() body: DonationBody){
-    console.log(req.user);
-    await this.invoiceService.createInvoice(req.user, body.amount, body.npo);
+  async makeDonation(@Body() body: DonationBody){
+    await this.invoiceService.createInvoice(body.username, body.amount, body.npo);
   } 
 
   @Get()
