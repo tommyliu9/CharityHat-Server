@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, HttpModule } from '@nestjs/common';
 import {MongooseModule} from '@nestjs/mongoose'
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.services';
@@ -14,7 +14,11 @@ export const jwtConstants = {
   JwtModule.register({
     secret: jwtConstants.secret,
     signOptions: { expiresIn: 604800 },
-  }),],
+  }),
+  HttpModule.register({
+    timeout: 5000,
+    maxRedirects: 5,
+  })],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy],
 })
