@@ -13,7 +13,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const passport_1 = require("@nestjs/passport");
 const invoice_services_1 = require("./invoice.services");
 class DonationBody {
 }
@@ -22,20 +21,18 @@ let InvoiceController = class InvoiceController {
     constructor(invoiceService) {
         this.invoiceService = invoiceService;
     }
-    async makeDonation(req, body) {
-        console.log(req.user);
-        await this.invoiceService.createInvoice(req.user, body.amount, body.npo);
+    async makeDonation(body) {
+        await this.invoiceService.createInvoice(body.username, body.amount, body.npo);
     }
     async whatever() {
         return "fewfew";
     }
 };
 __decorate([
-    common_1.UseGuards(passport_1.AuthGuard('jwt')),
     common_1.Post(),
-    __param(0, common_1.Request()), __param(1, common_1.Body()),
+    __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, DonationBody]),
+    __metadata("design:paramtypes", [DonationBody]),
     __metadata("design:returntype", Promise)
 ], InvoiceController.prototype, "makeDonation", null);
 __decorate([

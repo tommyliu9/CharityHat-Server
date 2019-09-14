@@ -7,39 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-<<<<<<< HEAD
-<<<<<<< refs/remotes/origin/master
-const mongoose_1 = require("@nestjs/mongoose");
-const invoice_services_1 = require("./invoice.services");
-let AuthModule = class AuthModule {
-};
-AuthModule = __decorate([
-    common_1.Module({
-        imports: [
-            mongoose_1.MongooseModule.forFeature([{ name: 'Auth', schema: invoice_services_1.InvoiceSchema }])
-        ],
-        controllers: [AuthController],
-        providers: [AuthService],
-    })
-], AuthModule);
-exports.AuthModule = AuthModule;
-=======
-=======
->>>>>>> invoice
 const invoice_services_1 = require("./invoice.services");
 const invoice_controller_1 = require("./invoice.controller");
 let InvoiceModule = class InvoiceModule {
 };
 InvoiceModule = __decorate([
     common_1.Module({
-        imports: [],
+        imports: [common_1.HttpModule.register({
+                timeout: 5000,
+                maxRedirects: 5,
+            })],
         controllers: [invoice_controller_1.InvoiceController],
         providers: [invoice_services_1.InvoiceService],
     })
 ], InvoiceModule);
 exports.InvoiceModule = InvoiceModule;
-<<<<<<< HEAD
->>>>>>> auth guard implemented
-=======
->>>>>>> invoice
 //# sourceMappingURL=invoice.module.js.map
