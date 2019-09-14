@@ -13,13 +13,13 @@ export class TransactionsService {
 
     async getAllTransactions(npo: string) {
         return await this.transactionsModel.find({
-            NPO: npo
+            npo
         }).exec();
     }
 
     async getTransactionsByUsername(username: string){
         return await this.transactionsModel.find({
-            Username: username
+            username
         }).exec();
     }
 
