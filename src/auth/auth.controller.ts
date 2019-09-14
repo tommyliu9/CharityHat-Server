@@ -16,6 +16,7 @@ export class Registration {
     public email: string;
     public username: string;
     public password: string;    
+    public clientid: string;
 }
 @Controller('auth')
 export class AuthController {
