@@ -6,7 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { TransactionsModule } from './transactions/transactions.module';
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/app'), AuthModule, InvoiceModule],
+  imports: [MongooseModule.forRoot('mongodb://localhost/'), AuthModule, InvoiceModule, TransactionsModule],
   controllers: [AppController],
   providers: [AppService],
 })
