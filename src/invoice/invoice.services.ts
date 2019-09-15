@@ -1,4 +1,3 @@
-
 import * as mongoose from 'mongoose';
 import { Injectable, Post, Param, HttpService } from '@nestjs/common';
 import { request } from 'https';
@@ -27,8 +26,7 @@ export class InvoiceService {
       }
     };
     const response = await this.httpService.
-    post(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices?`, {invoice: body}, config
-    ).toPromise();
+      post(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices?`, {invoice: body}, config).toPromise();
     const invoiceId = response.data.response.result.invoice.invoiceid;
     const afterRes = await this.httpService.put(
       `https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices/${invoiceId}`,
@@ -67,7 +65,7 @@ export class InvoiceService {
     console.log(afterRes);
     return invoiceId
   } 
-  createInvoiceBody(amount: number, customeridentifier){
+  createInvoiceBody( amount: number, customeridentifier){
       const x = {
           email: "api.freshbooks@gmail.com",
           customerid: customeridentifier,
