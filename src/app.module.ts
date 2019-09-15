@@ -5,9 +5,13 @@ import {MongooseModule} from '@nestjs/mongoose'
 import { AuthModule } from './auth/auth.module';
 import { InvoiceModule } from './invoice/invoice.module';
 import { TransactionsModule } from './transactions/transactions.module';
-import { ConfigModule } from './config/config.module';
+import { ExpensesModule } from './expenses/expenses.module';
+import { RatingsModule } from './ratings/ratings.module';
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/app1'), AuthModule, InvoiceModule, TransactionsModule, ConfigModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost/app'), AuthModule, InvoiceModule, 
+    TransactionsModule, ExpensesModule, RatingsModule 
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
