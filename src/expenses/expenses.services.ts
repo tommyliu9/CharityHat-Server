@@ -19,7 +19,7 @@ export class ExpenseService {
         const body = this.createExpenseBody(amount, categoryId);
         // console.log(body)
         const config = {
-            headers:{
+            headers: {
             Authorization: `Bearer ${this.configService.bearerToken}`
             }
           };
