@@ -9,6 +9,10 @@ export class expensesDTO {
   public categoryId: number;
 }
 
+export class CategoryString {
+  public categoryString: string;
+}
+
 @Controller('expenses')
 export class ExpenseController {
   constructor(private readonly expenseService: ExpenseService){}
@@ -24,6 +28,11 @@ export class ExpenseController {
   @Get(':npo')
   async getExpenses(@Param('npo') npo){
     return this.expenseService.getExpenses(npo);
+  }
+
+  @Get()
+  async categoryStringToId(@Body() body: CategoryString){
+    return this.expenseService.categoryStringToId(body.categoryString);
   }
 
 

@@ -54,4 +54,58 @@ export class ExpenseService {
         }).exec();
     }
 
+    async categoryStringToId(categoryString: string){
+        const catStrToId = {
+            AccidentInsurance: 881244,
+            Accounting: 881250,
+            Advertising: 881220,
+            Airfare: 881294,
+            BankFees: 881200,
+            BusinessInsurance: 881198,
+            CarTruckExpenses: 881222,
+            Commissions: 881216,
+            Contractors: 881234,
+            Depreciation: 881212,
+            Education: 881236,
+            Employee: 881238, 
+            Entertainment: 881256,
+            Equipment: 881284,
+            Gas: 881226,
+            GasElectrical: 881300,
+            Hardware: 881264,
+            HealthInsurance: 881240,
+            Hotel: 881292,
+            InterestMortgage: 881202,
+            InterestOther: 881204,
+            LegalFees: 881248,
+            LifeInsurance: 881242,
+            Machinery: 881282,
+            Mileage: 881224,
+            OfficeExpenses: 881258,
+            OfficeSpace: 881286,
+            OfficeSupplies: 881260,
+            OnlineServices: 881218,
+            Packaging: 881270,
+            Personal: 881276,
+            Phone: 881302,
+            Postage: 881268,
+            Rent: 881278,
+            Repairs: 881228,
+            Restaurants: 881254,
+            Shipping: 881266,
+            Software: 881262,
+            Subscriptions: 881214,
+            Taxes: 881208,
+            Taxi: 881296,
+            Utilities: 881298,
+            Vehicle: 881230,
+            Wages: 881210
+        }
+        if (categoryString==null){
+            return catStrToId;
+        } else{
+            return catStrToId[categoryString.toString()];
+        }
+    }
+
 }
