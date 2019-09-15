@@ -4,12 +4,14 @@ import { request } from 'https';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Registration } from 'src/auth/auth.controller';
+import { ConfigService } from '../config/config.service';
 const accountNum = 'lwXKJM';
 
 @Injectable()
 export class InvoiceService {
   constructor(private readonly httpService: HttpService,
-    @InjectModel("Auth") private readonly registrationModel: Model<Registration>){
+    @InjectModel("Auth") private readonly registrationModel: Model<Registration>,
+    private readonly configService: ConfigService){
 
   }
 
@@ -22,7 +24,7 @@ export class InvoiceService {
     const body = this.createInvoiceBody(amount, model.clientid);
     const config = {
       headers:{
-      Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
+      Authorization: `Bearer ${this.configService.npo1}`
       }
     };
     const response = await this.httpService.
