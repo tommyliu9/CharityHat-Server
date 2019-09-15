@@ -19,10 +19,10 @@ export class ExpenseService {
         const body = this.createExpenseBody(amount, categoryId);
         // console.log(body)
         const config = {
-            headers: {
-                Authorization: `Bearer ${this.configService.bearerToken}`
+            headers:{
+            Authorization: `Bearer ${this.configService.bearerToken}`
             }
-        };
+          };
         // console.log(config);
         const response = await this.httpService.post(
             `https://api.freshbooks.com/accounting/account/${accountNum}/expenses/expenses`,
