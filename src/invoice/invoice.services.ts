@@ -1,16 +1,25 @@
 import * as mongoose from 'mongoose';
 import { Injectable, Post, Param, HttpService } from '@nestjs/common';
 import { request } from 'https';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { Registration } from 'src/auth/auth.controller';
 const accountNum = 'lwXKJM';
 
 @Injectable()
 export class InvoiceService {
-  constructor(private readonly httpService: HttpService){
+  constructor(private readonly httpService: HttpService,
+    @InjectModel("Auth") private readonly registrationModel: Model<Registration>){
 
   }
 
   async createInvoice(user: string, amount: number, npo: string){
-    const body = this.createInvoiceBody(amount, 15450)
+    const model = await this.registrationModel.findOne({
+      username: user
+    });
+    console.log(model);
+    console.log("HERE",model.clientid);
+    const body = this.createInvoiceBody(amount, model.clientid);
     const config = {
       headers:{
       Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
@@ -36,6 +45,22 @@ export class InvoiceService {
         }
       },config
     ).toPromise();
+    const actuallyfufillOrder = await this.httpService.post(
+      `https://api.freshbooks.com/accounting/account/${accountNum}/payments/payments`,
+      {
+        payment:{
+          invoiceid: invoiceId,
+          amount: {
+            amount: amount.toString()
+          },
+          date: "2019-10-19",
+          type: "Check",
+          note: "Paid in full"
+        }
+      },
+      config
+    ).toPromise();
+
     console.log(fufillOrder.data.response.result.invoice);
     console.log(afterRes);
     return invoiceId
@@ -44,14 +69,14 @@ export class InvoiceService {
       const x = {
           email: "api.freshbooks@gmail.com",
           customerid: customeridentifier,
-          create_date: "2019-04-20",
+          create_date: "2019-09-20",
           lines: [ 
               {
                 type: 0,
                 description: "donation",
                 taxName1: "",
 				taxAmount1: 0,
-				name: "Climbing Helmet",
+				name: "Donation",
 				qty: 1,
 				taxName2: "",
 				taxAmount2: 0,

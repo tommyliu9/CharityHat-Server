@@ -30,5 +30,4 @@ export class TransactionsService {
         return await transaction.save()
     }
 
-
 }
