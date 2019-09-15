@@ -9,7 +9,8 @@ import {InvoiceService } from '../invoice/invoice.services'
 
 @Injectable()
 export class TransactionsService { 
-    constructor(@InjectModel("Transaction") private transactionsModel: Model<Transaction>, private readonly invoiceService: InvoiceService) {}
+    constructor(@InjectModel("Transaction") private transactionsModel: Model<Transaction>,
+        private readonly invoiceService: InvoiceService) {}
 
     async getAllTransactions(npo: string) {
         return await this.transactionsModel.find({
