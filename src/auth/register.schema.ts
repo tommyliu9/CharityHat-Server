@@ -6,7 +6,10 @@ export const RegistrationSchema = new mongoose.Schema({
     type: String,
     unique: true
   },
-  username: String,
+  username: {
+    type: String,
+    unique: true
+  },
   password: String,
-  clientid: String,
+  clientid: Number,
 });

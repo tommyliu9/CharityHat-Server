@@ -15,8 +15,11 @@ export class InvoiceService {
   }
 
   async createInvoice(user: string, amount: number, npo: string){
-    const model = await this.registrationModel.find({usernamne:user});
-    
+    const model = await this.registrationModel.findOne({
+      username: user
+    });
+    console.log(model);
+    console.log("HERE",model.clientid);
     const body = this.createInvoiceBody(amount, model.clientid);
     const config = {
       headers:{
@@ -52,7 +55,7 @@ export class InvoiceService {
       const x = {
           email: "api.freshbooks@gmail.com",
           customerid: customeridentifier,
-          create_date: "2019-04-20",
+          create_date: "2019-09-20",
           lines: [ 
               {
                 type: 0,
