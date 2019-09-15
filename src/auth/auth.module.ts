@@ -5,6 +5,7 @@ import { AuthService } from './auth.services';
 import { RegistrationSchema } from './register.schema';
 import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from './jwt.strategy';
+import { ConfigModule } from '../config/config.module';
 export const jwtConstants = {
   secret: 'secretKey',
 };
@@ -18,7 +19,8 @@ export const jwtConstants = {
   HttpModule.register({
     timeout: 5000,
     maxRedirects: 5,
-  })],
+  }),
+ConfigModule],
   controllers: [AuthController],
   providers: [AuthService, JwtStrategy],
 })

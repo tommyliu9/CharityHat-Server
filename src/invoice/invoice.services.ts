@@ -16,6 +16,13 @@ export class InvoiceService {
   }
 
   async createInvoice(user: string, amount: number, npo: string){
+    var token;
+    if(npo === "redcross"){
+      token = this.configService.npo1;
+    }
+    else{
+      token = this.configService.npo2;
+    }
     const model = await this.registrationModel.findOne({
       username: user
     });
@@ -24,7 +31,7 @@ export class InvoiceService {
     const body = this.createInvoiceBody(amount, model.clientid);
     const config = {
       headers:{
-      Authorization: `Bearer ${this.configService.npo1}`
+      Authorization: `Bearer ${token}`
       }
     };
     const response = await this.httpService.

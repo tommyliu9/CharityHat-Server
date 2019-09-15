@@ -1,4 +1,4 @@
-import { Injectable, Post } from '@nestjs/common';
+import { Injectable, Post, Param } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { TransactionSchema } from './transactions.schema';
 import { TransactionsController } from './transactions.controller';
@@ -9,7 +9,9 @@ import {InvoiceService } from '../invoice/invoice.services'
 
 @Injectable()
 export class TransactionsService { 
-    constructor(@InjectModel("Transaction") private transactionsModel: Model<Transaction>, private readonly invoiceService: InvoiceService) {}
+    constructor(@InjectModel("Transaction") private transactionsModel: Model<Transaction>, 
+    private readonly invoiceService: InvoiceService
+    ) {}
 
     async getAllTransactions(npo: string) {
         return await this.transactionsModel.find({
@@ -28,6 +30,9 @@ export class TransactionsService {
         const sendingTransaction = new TransactionDTO(username, npo, dateSent, amount, invoiceId);
         const transaction = new this.transactionsModel(sendingTransaction);
         return await transaction.save()
+    }
+    async getNpos(){
+        return {charities: ['redcross', 'canadahelps']}
     }
 
 }

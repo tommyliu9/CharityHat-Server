@@ -25,5 +25,9 @@ export class TransactionsController {
         const { username, npo, dateSent, amount } = body;
         return this.transactionsService.postTransactions(username, npo, dateSent, amount);
     }
+    @Get('npo')
+    async getCharities(){
+        return await this.transactionsService.getNpos();
+    }
 
 }

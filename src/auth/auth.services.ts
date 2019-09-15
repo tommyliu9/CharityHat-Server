@@ -5,6 +5,7 @@ import { Registration } from './auth.controller';
 import { Model } from 'mongoose';
 import { JwtService } from '@nestjs/jwt';
 import { randomFillSync } from 'crypto';
+import { ConfigService } from '../config/config.service';
 
 
 const accountId = 'lwXKJM';
@@ -13,7 +14,8 @@ const accountId = 'lwXKJM';
 export class AuthService {
   constructor(@InjectModel("Auth") private readonly registrationModel: Model<Registration>,
   private readonly jwtService: JwtService,
-  private readonly httpService: HttpService
+  private readonly httpService: HttpService,
+  private readonly configService: ConfigService
   ){
 
 
@@ -44,10 +46,10 @@ export class AuthService {
     const client = await this.generateClient(registrationDTO.email);
     const config = {
       headers:{
-      Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
+      Authorization: `Bearer ${this.configService.npo1}`
       }
     };
-
+    
     const response = await this.httpService.post(
       `https://api.freshbooks.com/accounting/account/${accountId}/users/clients`,
       client,
