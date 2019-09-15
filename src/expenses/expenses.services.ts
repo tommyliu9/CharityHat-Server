@@ -18,9 +18,11 @@ export class ExpenseService {
         // console.log('inside create expense')
         const body = this.createExpenseBody(amount, categoryId);
         // console.log(body)
+        const token = this.configService
         const config = {
             headers: {
-            Authorization: `Bearer ${this.configService.bearerToken}`
+
+            Authorization: `Bearer ${this.configService.npo1}`
             }
           };
         // console.log(config);
