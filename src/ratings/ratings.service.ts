@@ -11,14 +11,14 @@ export class RatingsService {
 
     async postNPOrating(npo: string, body: NPOratingDTO) {
         const { username, rating, date } = body;
-        console.log(username, rating, date);
+        // console.log(username, rating, date);
         const sendRating = new Ratings(username, npo, date, rating);
         const submittedRating = new this.ratingsModel(sendRating);
         return await submittedRating.save();
     }
 
     async getNPOrating(npo: string){
-        console.log('npo rating - service')
+        // console.log('npo rating - service')
         return await this.ratingsModel.find({
             npo
         }).exec();

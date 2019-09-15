@@ -1,8 +1,10 @@
-import { Controller, Get, Post, Body, UseGuards, Request } from '@nestjs/common';
+import { Controller, Get, Post, Body, UseGuards, Request, Param } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { ExpenseService } from './expenses.services';
 
-export class expensesDTO{ 
+
+export class expensesDTO { 
+  public npo: string;
   public amount: number;
   public categoryId: number;
 }
@@ -11,19 +13,18 @@ export class expensesDTO{
 export class ExpenseController {
   constructor(private readonly expenseService: ExpenseService){}
 
-  @Get()
-  async helloWorld(){
-    return "Hello World"
-  } 
 
   @Post()
-  async postExpenses(@Body() body: expensesDTO): Promise<any>{
-    await this.expenseService.createExpense(body.amount, body.categoryId);
-    const res = { 
-      statusCode: 200, 
-      message: "Correctly posted"
-    }
-    return res;
+  async postExpense(@Body() body: expensesDTO): Promise<any>{
+    const expenseId = await this.expenseService.createExpense(body.amount, body.categoryId);
+    // console.log(body.npo, body.amount, body.categoryId)
+    return await this.expenseService.postExpense(body.npo, body.amount, body.categoryId, expenseId);
   }
+
+  @Get(':npo')
+  async getExpenses(@Param('npo') npo){
+    return this.expenseService.getExpenses(npo);
+  }
+
 
 }

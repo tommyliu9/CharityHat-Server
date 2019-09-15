@@ -26,8 +26,8 @@ export class InvoiceService {
     const model = await this.registrationModel.findOne({
       username: user
     });
-    console.log(model);
-    console.log("HERE",model.clientid);
+    // console.log(model);
+    // console.log("HERE",model.clientid);
     const body = this.createInvoiceBody(amount, model.clientid);
     const config = {
       headers:{
@@ -70,8 +70,8 @@ export class InvoiceService {
       config
     ).toPromise();
 
-    console.log(fufillOrder.data.response.result.invoice);
-    console.log(afterRes);
+    // console.log(fufillOrder.data.response.result.invoice);
+    // console.log(afterRes);
     return invoiceId
   } 
   createInvoiceBody( amount: number, customeridentifier){

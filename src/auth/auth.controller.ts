@@ -25,9 +25,9 @@ export class AuthController {
   }
   @Post('/login')
   async login(@Body() login: Login){
-    console.log("HERE", login.username)
+    // console.log("HERE", login.username)
     const value = await this.appService.login(login.username,login.password);
-    console.log(value)
+    // console.log(value)
     return value;
   }
   @Post()

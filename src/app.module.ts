@@ -7,10 +7,11 @@ import { InvoiceModule } from './invoice/invoice.module';
 import { TransactionsModule } from './transactions/transactions.module';
 import { ExpensesModule } from './expenses/expenses.module';
 import { RatingsModule } from './ratings/ratings.module';
+import { ConfigModule } from './config/config.module';
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/app'), AuthModule, InvoiceModule, 
-    TransactionsModule, ExpensesModule, RatingsModule 
+    TransactionsModule, ExpensesModule, RatingsModule, ConfigModule
   ],
   controllers: [AppController],
   providers: [AppService],

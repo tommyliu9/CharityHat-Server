@@ -25,7 +25,7 @@ export class AuthService {
   }
   async login(username: string, password: string){
     const person = await this.validateUser(username,password)
-    console.log(person);
+    // console.log(person);
     if(person === null){
       
       throw new Error("USER NOT FOUND");
@@ -35,9 +35,9 @@ export class AuthService {
     
   }
   async validateUser(username: string, pass: string): Promise<any> {
-    console.log(username, pass);
+    // console.log(username, pass);
     const user = await this.registrationModel.findOne({username, password:pass});
-    console.log(user);
+    // console.log(user);
     if (user && user.password === pass) {
       const { password, ...result } = user;
       return result;
