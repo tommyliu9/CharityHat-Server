@@ -47,6 +47,22 @@ export class InvoiceService {
         }
       },config
     ).toPromise();
+    const actuallyfufillOrder = await this.httpService.post(
+      `https://api.freshbooks.com/accounting/account/${accountNum}/payments/payments`,
+      {
+        payment:{
+          invoiceid: invoiceId,
+          amount: {
+            amount: amount.toString()
+          },
+          date: "2019-10-19",
+          type: "Check",
+          note: "Paid in full"
+        }
+      },
+      config
+    ).toPromise();
+
     console.log(fufillOrder.data.response.result.invoice);
     console.log(afterRes);
     return invoiceId
@@ -62,7 +78,7 @@ export class InvoiceService {
                 description: "donation",
                 taxName1: "",
 				taxAmount1: 0,
-				name: "Climbing Helmet",
+				name: "Donation",
 				qty: 1,
 				taxName2: "",
 				taxAmount2: 0,
