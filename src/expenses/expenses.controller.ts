@@ -18,10 +18,12 @@ export class ExpenseController {
 
   @Post()
   async postExpenses(@Body() body: expensesDTO): Promise<any>{
-    console.log(body);
-    console.log('inside of controller');
     await this.expenseService.createExpense(body.amount, body.categoryId);
-    return "Called Successfully"
+    const res = { 
+      statusCode: 200, 
+      message: "Correctly posted"
+    }
+    return res;
   }
 
 }
