@@ -11,5 +11,5 @@ import { ExpenseController } from './expenses.controller';
   providers: [ExpenseService],
   exports: [ExpenseService]
 })
-export class ExpensesController {}
+export class ExpensesModule {}
 

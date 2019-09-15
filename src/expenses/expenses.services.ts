@@ -8,31 +8,32 @@ export class ExpenseService {
     constructor(private readonly httpService: HttpService) {}
 
     async createExpense(amount: number, categoryId: number ){
+        console.log('inside create expense')
         const body = this.createExpenseBody(amount, categoryId);
+        console.log(body)
         const config = {
-            headers:{
+            headers: {
                 Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
             }
         };
+        console.log(config);
         const response = await this.httpService.post(
             `https://api.freshbooks.com/accounting/account/${accountNum}/expenses/expenses`,
-            {expense: body}, config
+            body, config
         ).toPromise();
-
         return response.data.response.result.expense.id;
     }
     createExpenseBody(amount: number, categoryId: number){
         const body = {
             expense: {
                 amount: {
-                    amount: amount,
+                    amount: amount.toString(),
                 },
-                categoryId: categoryId, 
-                staffId: 1, 
-                date: new Date()
+                categoryid: categoryId, 
+                staffid: 1, 
+                date: "2019-09-14"
             }
         }
-        
         return body;
     }
 }
