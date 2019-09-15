@@ -1,4 +1,4 @@
-import { Injectable, Post, HttpService } from '@nestjs/common';
+import { Injectable, Post, HttpService, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { RegistrationSchema } from './register.schema';
 import { Registration } from './auth.controller';
@@ -25,15 +25,19 @@ export class AuthService {
   }
   async login(username: string, password: string){
     const person = await this.validateUser(username,password)
-    if(null){
-      return ""
+    console.log(person);
+    if(person === null){
+      
+      throw new Error("USER NOT FOUND");
     }
     const payload = { username: username};
     return {access_token: await this.jwtService.sign(payload)}
     
   }
   async validateUser(username: string, pass: string): Promise<any> {
+    console.log(username, pass);
     const user = await this.registrationModel.findOne({username, password:pass});
+    console.log(user);
     if (user && user.password === pass) {
       const { password, ...result } = user;
       return result;
