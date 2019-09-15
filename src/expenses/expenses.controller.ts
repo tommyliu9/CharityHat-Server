@@ -1,7 +1,14 @@
-import { Controller } from '@nestjs/common';
-import { TransactionsService } from './transactions.service';
-import { TransactionDTO } from './transactions.dto';
-import { Post, Put, Get, Delete, Body, Param } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
+import { Controller, Get, Post, Body, UseGuards, Request } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { ExpenseService } from './expenses.services';
 
 @Controller('expenses')
+export class ExpenseController {
+  constructor(private readonly expenseService: ExpenseService){}
+
+  @Get()
+  async helloWorld(){
+    return "Hello World"
+  } 
+
+}
