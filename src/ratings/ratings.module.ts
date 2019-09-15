@@ -11,5 +11,5 @@ import { RatingsSchema } from './ratings.schema';
   controllers: [RatingsController],
   providers: [RatingsService],
 })
-export class TransactionsModule {}
+export class RatingsModule {}
 
