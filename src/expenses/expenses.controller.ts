@@ -27,12 +27,12 @@ export class ExpenseController {
 
   @Get(':npo')
   async getExpenses(@Param('npo') npo){
-    return this.expenseService.getExpenses(npo);
+    return await this.expenseService.getExpenses(npo);
   }
 
   @Get()
   async categoryStringToId(@Body() body: CategoryString){
-    return this.expenseService.categoryStringToId(body.categoryString);
+    return await this.expenseService.categoryStringToId(body.categoryString);
   }
 
 

@@ -4,13 +4,15 @@ import { request } from 'https';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Expenses } from './expenses.interface';
+import { ConfigService } from '../config/config.service';
 
 const accountNum = 'lwXKJM';
 
 @Injectable()
 export class ExpenseService {
     constructor(@InjectModel("Expenses") private expensesModel: Model<Expenses>,
-        private readonly httpService: HttpService) {}
+        private readonly httpService: HttpService,
+        private readonly configService: ConfigService) {}
 
     async createExpense(amount: number, categoryId: number ){
         // console.log('inside create expense')
@@ -18,7 +20,7 @@ export class ExpenseService {
         // console.log(body)
         const config = {
             headers: {
-                Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
+                Authorization: `Bearer ${this.configService.bearerToken}`
             }
         };
         // console.log(config);

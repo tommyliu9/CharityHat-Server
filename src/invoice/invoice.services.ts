@@ -34,8 +34,8 @@ export class InvoiceService {
       Authorization: `Bearer ${token}`
       }
     };
-    const response = await this.httpService.
-      post(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices?`, {invoice: body}, config).toPromise();
+    const response = await this.httpService.post(`https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices?`, {invoice: body}, config).toPromise();
+    console.log(response.data.response);
     const invoiceId = response.data.response.result.invoice.invoiceid;
     const afterRes = await this.httpService.put(
       `https://api.freshbooks.com/accounting/account/${accountNum}/invoices/invoices/${invoiceId}`,
