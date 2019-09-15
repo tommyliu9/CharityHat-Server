@@ -1,10 +1,11 @@
-import { Injectable, Post, HttpService } from '@nestjs/common';
+import { Injectable, Post, HttpService, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { RegistrationSchema } from './register.schema';
 import { Registration } from './auth.controller';
 import { Model } from 'mongoose';
 import { JwtService } from '@nestjs/jwt';
 import { randomFillSync } from 'crypto';
+import { ConfigService } from '../config/config.service';
 
 
 const accountId = 'lwXKJM';
@@ -13,7 +14,8 @@ const accountId = 'lwXKJM';
 export class AuthService {
   constructor(@InjectModel("Auth") private readonly registrationModel: Model<Registration>,
   private readonly jwtService: JwtService,
-  private readonly httpService: HttpService
+  private readonly httpService: HttpService,
+  private readonly configService: ConfigService
   ){
 
 
@@ -23,15 +25,19 @@ export class AuthService {
   }
   async login(username: string, password: string){
     const person = await this.validateUser(username,password)
-    if(null){
-      return ""
+    console.log(person);
+    if(person === null){
+      
+      throw new Error("USER NOT FOUND");
     }
     const payload = { username: username};
     return {access_token: await this.jwtService.sign(payload)}
     
   }
   async validateUser(username: string, pass: string): Promise<any> {
+    console.log(username, pass);
     const user = await this.registrationModel.findOne({username, password:pass});
+    console.log(user);
     if (user && user.password === pass) {
       const { password, ...result } = user;
       return result;
@@ -44,10 +50,10 @@ export class AuthService {
     const client = await this.generateClient(registrationDTO.email);
     const config = {
       headers:{
-      Authorization: 'Bearer eed02a3ed761f461e032bc6d8b5d46a8ef24b64b9be41e7ac629cb35ce2b0a37'
+      Authorization: `Bearer ${this.configService.npo1}`
       }
     };
-
+    
     const response = await this.httpService.post(
       `https://api.freshbooks.com/accounting/account/${accountId}/users/clients`,
       client,

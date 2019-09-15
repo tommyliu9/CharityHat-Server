@@ -1,4 +1,4 @@
-import { Injectable, Post } from '@nestjs/common';
+import { Injectable, Post, Param } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { TransactionSchema } from './transactions.schema';
 import { TransactionsController } from './transactions.controller';
@@ -29,6 +29,9 @@ export class TransactionsService {
         const sendingTransaction = new TransactionDTO(username, npo, dateSent, amount, invoiceId);
         const transaction = new this.transactionsModel(sendingTransaction);
         return await transaction.save()
+    }
+    async getNpos(){
+        return {charities: ['redcross', 'canadahelps']}
     }
 
 }

@@ -10,7 +10,8 @@ import { RatingsModule } from './ratings/ratings.module';
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost/app'), AuthModule, InvoiceModule, 
-    TransactionsModule, ExpensesModule, RatingsModule ],
+    TransactionsModule, ExpensesModule, RatingsModule 
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
