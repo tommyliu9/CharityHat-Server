@@ -10,16 +10,18 @@ export class RatingsService {
     constructor(@InjectModel("Ratings") private ratingsModel: Model<Ratings>){}
 
     async postNPOrating(npo: string, body: NPOratingDTO) {
-        const { username, rating, date } = body
-        const sendRating = new Ratings(npo, username, rating, date);
+        const { username, rating, date } = body;
+        console.log(username, rating, date);
+        const sendRating = new Ratings(username, npo, date, rating);
         const submittedRating = new this.ratingsModel(sendRating);
         return await submittedRating.save();
     }
 
     async getNPOrating(npo: string){
+        console.log('npo rating - service')
         return await this.ratingsModel.find({
             npo
-        }).exec()
+        }).exec();
     }
-    
+
 } 

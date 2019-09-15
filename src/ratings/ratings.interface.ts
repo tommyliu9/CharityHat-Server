@@ -8,6 +8,6 @@ export class Ratings {
 
     username: string;
     npo: string; 
-    date: Date;
     rating: number;
+    date?: Date;
 }

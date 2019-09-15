@@ -6,7 +6,7 @@ import { InjectModel } from '@nestjs/mongoose';
 export class NPOratingDTO { 
     username: string;
     rating: number;
-    date: Date;
+    date?: Date;
 }
 
 @Controller('ratings')
@@ -20,6 +20,6 @@ export class RatingsController {
 
     @Get(':npo')
     async getNPOrating(@Param('npo') npo){
-        return this.getNPOrating(npo);
+        return this.ratingsService.getNPOrating(npo);
     }
 }
